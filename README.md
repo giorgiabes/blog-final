@@ -2,7 +2,7 @@
 ## How to Use
 1) Clone and cd to cloned directory:
 ```
-git clone https://github.com/giorgiabes/blog-starter.git && cd blog-starter
+git clone https://github.com/giorgiabes/blog-final.git && cd blog-final
 ```
 2) Create and activate a virtual environment:
 ```
