@@ -1,3 +1,4 @@
+/* Existing styles (unchanged) */
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 18px;
@@ -72,7 +73,7 @@ header h1 a {
 }
 
 .main-container {
-  max-width: 800;
+  max-width: 800px; /* Fixed missing px unit */
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -80,4 +81,100 @@ header h1 a {
 .block-container {
   margin-top: 50px;
   margin-bottom: 150px;
+}
+
+/* New profile-specific additions */
+.profile-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin: 2rem 0;
+}
+
+.profile-card h2 {
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.profile-info p {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.profile-info strong {
+  color: #666;
+}
+
+.profile-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f8f8f8;
+  border-radius: 8px;
+}
+
+.profile-form .form-field {
+  margin-bottom: 1.5rem;
+}
+
+.profile-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.profile-form input[type="text"],
+.profile-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.profile-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.profile-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.profile-btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  background: #4a90e2;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.profile-btn:hover {
+  background: #357abd;
+}
+
+/* Existing header styles preserved */
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.user-menu a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.user-menu a:hover {
+  color: #333;
 }

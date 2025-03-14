@@ -19,11 +19,14 @@
     </header>
     <main>
       {% if user.is_authenticated %}
-      <p>Hi {{ user.username }}!</p>
-      <form action="{% url 'logout' %}" method="post">
-        {% csrf_token %}
-        <button type="submit">Log Out</button>
-      </form>
+      <div class="user-manu">
+        <span>Hi {{ user.username }}!</span>
+        <a href="{% url 'profile' %}">Profile</a>
+        <form action="{% url 'logout' %}" method="post">
+          {% csrf_token %}
+          <button type="submit">Log Out</button>
+        </form>
+      </div>
       {% else %}
       <p>You are not logged in.</p>
       <a href="{% url 'login' %}">Log In</a> |

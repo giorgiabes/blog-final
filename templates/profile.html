@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="profile">
+    <h1>{{ profile.user.username }}</h1>
+    <div class="profile-info">
+        <p>
+            <strong>Email:</strong> {{ profile.user.email }}
+        </p>
+        {% if profile.bio %}
+        <p>
+            {{ profiel.bio }}
+        </p>
+        {% endif %}
+        {% if profile.location %}
+        <p>
+            📍 {{ profile.location }}
+        </p>
+        {% endif %}
+        {% if profile.website %}
+        <p>
+            🌐 <a href="{{ profile.website }}">{{ profile.website }}</a>
+        </p>
+        {% endif %}
+    </div>
+    <a href="{% url 'profile_edit' %}">Edit Profile</a>
+</div>
+{% endblock content %}
